@@ -1,5 +1,15 @@
+* {
+  background-color: #282c34;
+  min-height: 100vh;
+  
+}
+
 .App {
+  display: flex;
+  align-content: center;
   text-align: center;
+  background-color: #282c34;
+  color: rgba(255, 255, 255, 0.884);
 }
 
 .App-logo {

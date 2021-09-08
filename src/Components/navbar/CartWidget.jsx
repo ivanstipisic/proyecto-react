@@ -4,8 +4,7 @@ import './NavBar.css';
 const CartWidget = () => {
     return (
         <>
-        <img className="cart" 
-        src='https://e7.pngegg.com/pngimages/603/776/png-clipart-shopping-cart-shopping-cart.png' />    
+        <img src='https://images.vexels.com/media/users/3/200097/isolated/lists/942820836246f08c2d6be20a45a84139-icono-de-carrito-de-compras-carrito-de-compras.png' alt='#'/>    
         </>
     )
 }

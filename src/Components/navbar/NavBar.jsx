@@ -18,13 +18,13 @@ const NavBar = () => {
       <Nav.Link href="#rowling">J.K ROWLING</Nav.Link>
       <Nav.Link href="#martin">G.R.R MARTIN</Nav.Link>
       <Nav.Link href="#tolkien">J.R.R TOLKIEN </Nav.Link>
+    <CartWidget />
     </Nav>
     </Container>
     
   
   </Navbar>
   </div>
-    {/* <CartWidget /> */}
     
     
     

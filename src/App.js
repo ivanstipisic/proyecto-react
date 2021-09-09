@@ -7,10 +7,13 @@ import ItemListContainer from './Components/ItemListContainer';
 function App() {
   return (
     <>  
+      <div className="body">
       <NavBar />
 
-      <ItemListContainer saludo='Bienvenidos !!' />
-    
+      <ItemListContainer saludo='The Book Store.. seleccione su producto 👇🏻' />
+      </div>
+
+      
     </>
   );
 }

@@ -1,6 +1,8 @@
 * {
   background-color: #282c34;
-  color:rgba(255, 255, 255, 0.884)
+  color: rgba(255, 255, 255, 0.884);
+  
+  
 }
 
 .App {
@@ -13,3 +15,4 @@
   align-content: center;
   text-align: center;
 }
+

@@ -10,7 +10,7 @@ function App() {
       <div className="body">
       <NavBar />
 
-      <ItemListContainer saludo='The Book Store.. seleccione su producto 👇🏻' />
+      <ItemListContainer className='saludo' saludo='The Book Store.. seleccione su producto 👇🏻' />
       </div>
 
       

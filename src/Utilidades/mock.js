@@ -17,4 +17,10 @@ export const getProduct = new Promise ((resolve) => {
    
 })
 
+const producto2 = productos.filter((item) => item.id === 1)
 
+export const getProduct2 = new Promise ((resolve) => {
+    setTimeout(() => {
+        resolve(producto2)
+    }, 2000);
+})

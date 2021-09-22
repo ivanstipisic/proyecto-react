@@ -1,27 +1,24 @@
-import React, { useEffect, useState}   from 'react'
+import React, {useState, useEffect }   from 'react'
 import { getProduct2 } from '../../Utilidades/mock'
 import ItemDetail from './ItemDetail'
 
 
 
-
 const ItemDetailContainer = () => {
-    
-    const [producto2, setProducto1] = useState ({})
+    const [product2, setProduct2] = useState({})
 
+    
     useEffect(() => {
      
         getProduct2
-        .then(resolve => setProducto1(resolve))
+        .then (resp => setProduct2(resp))
         
     }, [])
 
     return (
-        <div>
-
-        <ItemDetail key={producto2} item ={producto2} />
-            
-        </div>
+        <>
+        <ItemDetail product2={product2} />
+        </>
     )
 }
 

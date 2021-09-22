@@ -1,26 +1,26 @@
 import React from 'react'
 
-const ItemDetail = ({producto2}) => {
+const ItemDetail = ({product2}) => {
     return (
         <>
-        <div key={producto2.id} className='card w-50 bg-dark'>
+        
+        <div key={product2.id} className='card w-50 bg-dark'>
         <br/>
         
         <div className='card-header bg-secondary'>
-        {producto2.autor}
+        {product2.id}
         </div>
 
         <div className='card-body bg-success'>
-        <img className='card-img w-60' src={producto2.portada} alt=""  />
+        <img className='card-img w-60' src={product2.portada} alt=""  />
         </div>
-        <p className='card-text'>
-        Primera entrega de la saga Harry Potter
-        </p>
-
+        
         <div className='card-footer bg-secondary'>
-        <button className='btn btn-outline-dark'> {producto2.autor}</button>
+        <button className='btn btn-outline-dark'> {product2.autor}</button>
         </div>    
-        </div>        </>
+        </div>       
+        
+        </>
     )
 }
 

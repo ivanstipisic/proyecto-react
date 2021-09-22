@@ -3,7 +3,7 @@ import ItemCount from './ItemCount';
 import '../App.css';
 import {getProduct} from '../Utilidades/mock.js'
 import ItemList from './Items/ItemList';
-
+import { useParams } from "react-router-dom";
 
 
 
@@ -11,23 +11,37 @@ function ItemListContainer({saludo}) {
 
     const [producto, setProducto] = useState([])
     const [loading, setLoading] = useState(true)
-    
+    const { idCategoria } = useParams ()
+
+
     const onAdd = (cantidad) => {
         console.log(cantidad)
     }
     
 
     useEffect(() => {
-        getProduct
-        .then(resolve => {
-            setProducto(resolve)
-        })
-        .catch(error => console.log((error)))
-        .finally(()=>setLoading(false))
-    }, [])
+        
+        if (idCategoria ) {
+            getProduct
+            .then(resolve => {
+
+            setProducto (resolve.filter(producto => producto.categoria === idCategoria))        
+        })    
+    } else {
+
+            getProduct
+            .then(resolve => {
+                setProducto(resolve)
+            })
+            .catch(error => console.log((error)))
+            .finally(()=>setLoading(false))
+        }
+        
+    }, [idCategoria])
+        
     
 
-
+    console.log(idCategoria);
 
       
     return (

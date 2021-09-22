@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Item = ({productos}) => {
     return (
-        
+<div style={{display:"flex", justifyContent:"center", flexDirection:"row", flexWrap:"wrap"}}>        
 <div key={productos.id} className='card w-50 bg-dark'>
 <br/>
 
@@ -21,6 +21,7 @@ const Item = ({productos}) => {
 </Link>
 </div>
 
+</div>
 </div>
 )   
 

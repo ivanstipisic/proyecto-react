@@ -25,3 +25,4 @@ export const getProduct2 = new Promise ((resp) => {
         resp(product2)
     }, 2000)
 })
+

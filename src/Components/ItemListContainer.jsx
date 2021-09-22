@@ -14,8 +14,8 @@ function ItemListContainer({saludo}) {
     const { idCategoria } = useParams ()
 
 
-    const onAdd = (cantidad) => {
-        console.log(cantidad)
+    const onAdd = (cant) => {
+        console.log(cant)
     }
     
 
@@ -26,7 +26,9 @@ function ItemListContainer({saludo}) {
             .then(resolve => {
 
             setProducto (resolve.filter(producto => producto.categoria === idCategoria))        
-        })    
+        })
+        .catch(error => console.log((error)))
+            .finally(()=>setLoading(false))   
     } else {
 
             getProduct

@@ -18,7 +18,7 @@ const NavBar = () => {
     <Navbar.Brand href="#home">The Book Store 📚 </Navbar.Brand>
     </Link>
     <Nav className="me-auto">
-      <Link exact to='/categoria/literatura-fantastica'>
+      <Link exact to='/categoria/Literatura-fantastica'>
       <Nav.Link href="#rowling">J.K ROWLING</Nav.Link>
       </Link>
       <Nav.Link href="#martin">G.R.R MARTIN</Nav.Link>

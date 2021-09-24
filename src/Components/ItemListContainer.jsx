@@ -1,5 +1,4 @@
 import React, {useState , useEffect } from 'react'
-import ItemCount from './ItemCount';
 import '../App.css';
 import {getProduct} from '../Utilidades/mock.js'
 import ItemList from './Items/ItemList';
@@ -14,9 +13,6 @@ function ItemListContainer({saludo}) {
     const { idCategoria } = useParams ()
 
 
-    const onAdd = (cant) => {
-        console.log(cant)
-    }
     
 
     useEffect(() => {
@@ -52,7 +48,6 @@ function ItemListContainer({saludo}) {
 
        { loading ? <h2> ... </h2> : <ItemList productos = {producto} />} 
        
-        <ItemCount stock={5} initial={1} onAdd={onAdd} />
         </div>
     )
 }

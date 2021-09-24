@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Cart() {
     return (
         <div>
@@ -9,3 +10,5 @@ function Cart() {
 }
 
 export default Cart
+
+

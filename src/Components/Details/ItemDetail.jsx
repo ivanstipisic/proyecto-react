@@ -1,6 +1,15 @@
-import React from 'react'
+import { useState } from 'react'
+import ItemCount from '../ItemCount'
+
+
 
 const ItemDetail = ({product2}) => {
+    const [cantSelect, setCantSelect] = useState (0) 
+    const onAdd = (cant) => {
+        console.log(cant)
+        setCantSelect(cant)
+    }
+
     return (
         <>
         
@@ -17,6 +26,10 @@ const ItemDetail = ({product2}) => {
         
         <div className='card-footer bg-secondary'>
         <button className='btn btn-outline-dark'> {product2.autor}</button>
+        
+        <ItemCount stock={5} initial={1} onAdd={onAdd} />
+
+        {/* <Eventos /> */}
         </div>    
         </div>       
         

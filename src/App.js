@@ -17,13 +17,13 @@ function App() {
       
       <Switch>
       {/* OPCION 1 DE ENRUTADO */}
-      <Route path='/' exact>
+      <Route exact path='/' >
       <ItemListContainer className='saludo' saludo='The Book Store.. seleccione su producto 👇🏻' />
       </Route>
 
       {/* OPCION 2 ENRUTADO */}
           <Route exact path='/categoria/:idCategoria' component={ItemListContainer} />
-          <Route exact path='/detalle/id' component ={ItemDetailContainer} />
+          <Route exact path='/detalle/' component ={ItemDetailContainer} />
           <Route exact path='/cart' component ={Cart} />
 
       </Switch>

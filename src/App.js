@@ -5,13 +5,31 @@ import NavBar from './Components/navbar/NavBar';
 import ItemListContainer from './Components/ItemListContainer';
 import ItemDetailContainer from './Components/Details/ItemDetailContainer';
 import Cart from './Components/Cart/Cart';
+import { createContext, useState } from 'react';
+import CartContextProvider from './Context/CartContext';
 
+
+// const categories = [
+//   { nombre:'ivan', id: 1, detalle: 'hola soy' },
+//   { nombre:'rafael', id: 2, detalle: 'hola soy' },
+// ]
+
+export const ContextApp = createContext ()
 
 
 function App() {
-  return (
-<BrowserRouter>
 
+  // const [state, setstate] = useState(categories)
+
+
+  return (
+    <CartContextProvider>
+
+    <ContextApp.Provider> 
+      {/* value = {{state, setstate}}> */}
+
+    <BrowserRouter>
+      
       <div className="body">
       <NavBar />
       
@@ -23,13 +41,17 @@ function App() {
 
       {/* OPCION 2 ENRUTADO */}
           <Route exact path='/categoria/:idCategoria' component={ItemListContainer} />
-          <Route exact path='/detalle/' component ={ItemDetailContainer} />
+          <Route exact path='/detalle/:id' component ={ItemDetailContainer} />
           <Route exact path='/cart' component ={Cart} />
 
       </Switch>
       </div>
 
 </BrowserRouter>
+
+</ContextApp.Provider>
+</CartContextProvider>
+
   );
 }
 

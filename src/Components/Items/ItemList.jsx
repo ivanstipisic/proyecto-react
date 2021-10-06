@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Item from './Item'
 
 
-const ItemList = ({productos}) => {
+const ItemList = memo (
+
+({productos}) => {
     return (
     <>
     {productos.map(productos => <Item productos={productos} />) }
@@ -10,5 +12,6 @@ const ItemList = ({productos}) => {
     </>
     )
 }
+)
 
 export default ItemList

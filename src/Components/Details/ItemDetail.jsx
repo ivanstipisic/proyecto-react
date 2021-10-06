@@ -1,23 +1,35 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { ContextApp } from '../../App'
+import { UseCartContext } from '../../Context/CartContext'
 import ItemCount from '../ItemCount'
 
 
-
 const ItemDetail = ({product2}) => {
+    
+    // const { state } = useContext (ContextApp)
+    
     const [cantSelect, setCantSelect] = useState (0) 
+    
+    const useContextApp = useContext (ContextApp)
+
     const onAdd = (cant) => {
-        console.log(cant)
+        
         setCantSelect(cant)
+        addToCart ({item: product2, cantidad: cant})
     }
+
+
+    const {addToCart} = UseCartContext ()
 
     return (
         <>
+        {/* {useContextApp.map(product2 => <p> {product2.nombre} </p>)} */}
         
         <div key={product2.id} className='card w-50 bg-dark'>
         <br/>
         
         <div className='card-header bg-secondary'>
-        {product2.id}
+        {product2.title}
         </div>
 
         <div className='card-body bg-success'>
@@ -29,7 +41,6 @@ const ItemDetail = ({product2}) => {
         
         <ItemCount stock={5} initial={1} onAdd={onAdd} />
 
-        {/* <Eventos /> */}
         </div>    
         </div>       
         
